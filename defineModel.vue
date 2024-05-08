@@ -69,6 +69,6 @@ const emit = defineEmits(['update:modelValue'])
 
 <!-- Parent.vue -->
 <Child
-  :modelValue="foo"
-  @update:modelValue="$event => (foo = $event)"
+  :modelValue="foo" // ----> it's value
+  @update:modelValue="$event => (foo = $event)" // ----> it's onChange
 />
