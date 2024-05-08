@@ -12,6 +12,7 @@
       <p>Total: ${{ totalPrice }}</p>
     </div>
     <hr>
+    {{ msg }}
     <h2>Available Products</h2>
     <ul>
       <li v-for="(product, index) in products" :key="index">
@@ -28,6 +29,8 @@ import { reactive, computed } from 'vue';
 export default {
   setup() {
     // Define reactive state for cart and products
+    const msg = ref('test msg');
+
     const state = reactive({
       cart: [],
       products: [
