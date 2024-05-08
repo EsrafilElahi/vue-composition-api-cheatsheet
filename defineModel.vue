@@ -66,3 +66,9 @@ const emit = defineEmits(['update:modelValue'])
 <template>
   <input :value="props.modelValue" @input="emit('update:modelValue', $event.target.value)" />
 </template>
+
+<!-- Parent.vue -->
+<Child
+  :modelValue="foo"
+  @update:modelValue="$event => (foo = $event)"
+/>
