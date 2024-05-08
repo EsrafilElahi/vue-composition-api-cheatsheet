@@ -12,7 +12,7 @@
       <p>Total: ${{ totalPrice }}</p>
     </div>
     <hr>
-    {{ msg }}
+    {{ msg.value }}
     <h2>Available Products</h2>
     <ul>
       <li v-for="(product, index) in products" :key="index">
@@ -56,6 +56,7 @@ export default {
     };
 
     return {
+      msg,
       cart: state.cart,
       products: state.products,
       totalPrice,
